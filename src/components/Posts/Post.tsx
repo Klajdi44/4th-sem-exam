@@ -170,16 +170,14 @@ function Post(props: Props) {
             const time = `${date} ${month} ${year} ${hour}`;
 
             return (
-              <section>
-                <ChatRoomCard
-                  key={time + Math.random()}
-                  fullname={el.fullname}
-                  profileImg={el.profileImg}
-                  text={el.text}
-                  uid={el.commentorUid}
-                  time={time}
-                />
-              </section>
+              <ChatRoomCard
+                key={time + Math.random()}
+                fullname={el.fullname}
+                profileImg={el.profileImg}
+                text={el.text}
+                uid={el.commentorUid}
+                time={time}
+              />
             );
           })}
         {showLoad && props.comments.length !== postComments.length && (
