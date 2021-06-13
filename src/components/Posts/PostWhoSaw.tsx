@@ -34,22 +34,19 @@ function PostWhoSaw(props: Props) {
       <div className='user-img-div'>
         {uniqArr && uniqArr.length <= 3
           ? uniqArr.map((comment: Comments) => (
-            <img
-              key={comment.fullname + Math.random()}
-              className='user-img'
-              src={comment.profileImg}
-              alt='images of people who commented on the post'
-            />
-          ))
+              <img
+                key={comment.fullname + Math.random()}
+                className='user-img'
+                src={comment.profileImg}
+              />
+            ))
           : commentArr.map((comment: Comments) => (
-            <img
-              key={comment.fullname + Math.random()}
-              className='user-img'
-              src={comment.profileImg}
-              alt='images of people who commented on the post'
-
-            />
-          ))}
+              <img
+                key={comment.fullname + Math.random()}
+                className='user-img'
+                src={comment.profileImg}
+              />
+            ))}
       </div>
       {uniqArr.length > 3 && <p>+ {uniqArr.length - commentArr.length}</p>}
     </div>
